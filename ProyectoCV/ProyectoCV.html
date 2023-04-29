@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Yafrednys</title>
+    <script src="https://kit.fontawesome.com/f1c41f8039.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+            width: 80vw;
+            margin: auto;
+            display: grid;
+            grid-template-areas:
+            "header1 header1 header2 header2"
+            "nav nav nav nav"
+            "main1 main1 main2 main2"
+            "main3 main3 main4 main4"
+            "footer footer footer footer";
+            gap: 10px;
+        }
+
+        .header1{grid-area: header1; place-self: end;}
+        .header2{
+            grid-area: header2;
+            & p{
+                color: blue;
+            }   
+        }
+        nav{grid-area: nav;
+            display: flex;
+            background: violet;
+            justify-content: space-evenly;
+        }
+        #main1{grid-area: main1}
+        #main2{grid-area: main2}
+        #main3{grid-area: main3}
+        #main4{grid-area: main4}
+        footer{grid-area: footer}
+
+        nav a{
+            flex: 25%;
+            text-align: center;
+            color: whitesmoke;
+            padding: 15px;
+        }
+
+    .card{
+        border: 1px magenta solid;
+        border-radius: 10px;
+    }
+    .card-body{
+        padding: 2px 20px;
+    }
+    .card-body h3{
+        padding: 5px 0 3px 0;
+        color: darkmagenta;
+    }
+    .card-body h4{
+        font-size: normal;
+        color: darkblue;
+        padding: 5px 0 0 0;
+    }
+    .card a{
+        display: none;
+    }
+    li{
+        padding: 6px;
+    }
+   #main4 ul{
+    list-style-type: none;
+   }
+   #main4 ul li:nth-child(-n+3){
+    border-bottom: 1px solid #aaa;
+   }
+
+footer{
+    background-color: darkmagenta;
+    padding: 10px;
+    color:azure;
+    font-size: 1.2em;
+}
+        @media only screen and (min-width: 1px) and (max-width:767px){
+            body{
+                grid-template-areas: 
+                "header1"
+                "header2"
+                "nav"
+                "main1"
+                "main2"
+                "main3"
+                "main4"
+                "footer";
+            }
+            nav{
+                flex-direction: column;
+            }
+            .header1{
+                width: 150px;
+                margin: 0 auto;
+            }
+            #DatosPersonales{
+                text-align: center;
+            }
+            .card a{
+                display: block;
+                border:1px solid mediumslateblue;
+                border-radius: 10px;
+                background-color: white;
+                color: blue;
+                text-align: center;
+            }
+            .card a:hover{
+            background:magenta;
+            color: white;
+            }
+        }
+        @media only screen and (max-width: 991px) and (min-width: 768px){
+            body{
+                grid-template-areas:
+            "header1 header2"
+            "nav nav"
+            "main1 main2"
+            "main3 main4"
+            "footer footer";
+            }
+            nav{flex-wrap: wrap;}
+            nav a{flex: 45%}
+        }
+    </style>
+</head>
+<body id="up">
+    <img class="header1" src="https://i.ibb.co/h1KS2DV/mujercv.jpg">
+    <div class="header2" id="DatosPersonales">
+        <h1>Yafrednys Garcia</h1>
+        <p><b>DNI:</b>15051505<br>
+            <b>Fecha de Nacimiento:</b>15/05/1987<br>    
+            <b>Domicilio:</b>Buenos Aires, CABA<br>
+            <b>Telefono:</b>15051505<br>
+            <b>Email:</b>yafrednysg@gmail.com</p>
+    </div>
+
+    <nav>
+        <a href="#main1"><h2><i class="fa-solid fa-book-open"></i><br>Formacion<br>Academica</h2></a>
+        <a href="#main2"><h2><i class="fa-solid fa-briefcase"></i><br>Experiencia<br>Laboral</h2></a>
+        <a href="#main3"><h2><i class="fa-solid fa-laptop-code"></i><br>Herramientas<br>Informaticas</h2></a>
+        <a href="#main4"><h2><i class="fa-solid fa-address-book"></i><br>Referencias<br>Personales</h2></a>
+    </nav>
+    
+    <div class="card" id="main1">
+        <div class="card-body">
+            <h3>Formacion Academica</h3>
+            <h4>Tecnico Superior Universitario en Informatica</h4>
+            <b>Junio 2004 - Enero 2007</b>
+            <p>Instituto Universitrio de Tecnologia de Administracion Industrial IUTA - Anaco</p>
+            <h4>Bachiller Mencion Ciencias</h4>
+            <b>Junio 1999 - Enero 2004</b>
+            <p>UE Roberto Castillo Cardier - Anaco</p>
+        </div>
+        <a href="#up">Ir al inicio</a>
+    </div>
+    <div class="card" id="main2">
+        <div class="card-body">
+            <h3>Experiencia Laboral</h3>
+            <h4>Mol Hats</h4>
+            <b>Febrero 2019 - Actualidad</b>
+            <p>Operador Ecommerce, atencion al cliente, creacion de publicaciones, 
+            sistema adminitrativo y de stock.</p>
+            <h4>Inces</h4>
+            <b>Abril 2008 - Diciembre 2011</b>
+            <p>Profesora en el area de informatica basica</p>
+            <h4>Soporte Tecnico Freelance</h4>
+            <b>Abril 2007 - Diciembre 2016</b>
+            <p>Reparacion y Matenimiento a nivel de Hardware y Software</p>
+        </div>
+        <a href="#up">Ir al inicio</a>
+    </div>
+    <div class="card" id="main3">
+        <div class="card-body">
+            <h3>Herramientas Informaticas</h3>
+            <ul>
+                <li>Paquete de Office (Word, Excel, Power Point).</li>
+                <li>Herramientas de Google (Google Docs, Spreadsheets, Slides).</li>
+                <li>HTML, CSS, Boostrap, Javascript, NodeJs.</li>
+            </ul>
+            <a href="#up">Ir al inicio</a>
+        </div>
+    </div>    
+    <div class="card" id="main4">
+        <div class="card-body">
+            <h3>Referecias Personales</h3>
+            <ul>
+                <li>Nombre de la Persona, Relacion Laboral Anterior.<br> Mail o Cel de contacto.</li>
+                <li>Nombre de la Persona, Relacion Laboral Anterior.<br> Mail o Cel de contacto.</li>
+                <li>Nombre de la Persona, Relacion Laboral Anterior.<br> Mail o Cel de contacto.</li>
+                <li>Nombre de la Persona, Relacion Laboral Anterior.<br> Mail o Cel de contacto.</li>
+            </ul>
+            <a href="#up">Ir al inicio</a>
+         </div>
+    </div>
+<footer>
+    <p>Copyright © 2023 - Desarrollado por <b>Yafrednys</b></p>
+</footer>
+</body>
+</html>
